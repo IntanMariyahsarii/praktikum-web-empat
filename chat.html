@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Message</title>
+    <style>
+    body{
+        background-color:lightsteelblue;
+    }
+    h2{
+      margin-left: 500px;
+      color: navy;
+      font-family: georgia;
+    }
+    .boxchat {
+      margin-left: 300px;
+      width: 500px;
+      border: 1px solid black;
+      padding: 50px;
+      font-family: calibri;
+    }
+    .inputpesan{
+      border: 1px  black;
+      width: 50px;
+      height: 20px;
+    }
+    textarea{
+      background-color: lightsteelblue;
+      margin-left: 300px;
+    }
+    .tombol {
+     background: #3498db;
+     color: #fff;
+     border: 0;
+     padding: 5px 8px;
+     margin-left: 300px;
+    }
+
+    </style>
+</head>
+
+<body class="body">
+  <h2 class="h2">Chat Message</h2><br>
+    <div class="boxchat" id="box">
+    </div>
+    <div class="inputpesan">
+      <textarea name="pesan"  id="pesan" cols="83" rows="5"></textarea>
+      <button class="tombol" onclick="kirimPesan()">Kirim</button>
+    </div>
+  </body>
+  <script>
+    function kirimPesan() {
+      var pesan = document.getElementById("pesan").value;
+  
+      var node = document.createElement("div");
+      var textnode = document.createTextNode(pesan);
+      node.appendChild(textnode);
+      document.getElementById("box").appendChild(node);
+    }
+  </script>
+</html>

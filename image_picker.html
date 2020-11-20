@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body class="body">
+    <h3 class="h3">Select Your Favorite Food</h3><br>
+    <select class="input" onchange="displayGambar(this);">
+        <option value="images/bakso.jpg">Bakso</option>
+        <option value="images/mie_ayam.jpg">Mie Ayam</option>
+        <option value="images/mie_goreng.jpg">Mie Goreng</option>
+        <option value="images/nasi_goreng.jpg">Nasi Goreng</option>
+    </select><br>
+    <img id="images" class="images" src="images/bakso.jpg" alt="">
+</body>
+<script>
+    function displayGambar(elem) {
+        var gambar = document.getElementById("images");
+        gambar.src = elem.value;
+    }
+    if (username == "intanmariyahsari" && password == "belajarjs") {
+        location.href = 'sukses_login.html';
+    } else if (username == "" || password == "") {
+        alert("username dan password tidak boleh kosong!");
+    } else {
+        alert("username atau password yang anda masukan salah!");
+    }
+</script>
+</body>
+</html>

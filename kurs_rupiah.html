@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kurs Rupiah</title>
+  <style>
+    
+    body{
+          background-color: lightsteelblue;
+    }
+    h3{
+        margin-left: 50px;
+        color:navy;
+        font-family: calibri;
+        font-size: x-large;
+    }
+    .tombol {
+    background: #3498db;
+    color: #fff;
+    border: 0;
+    padding: 5px 8px;
+    margin-left: 50px   ;
+    }
+    .nilai{
+    padding: 8px;
+    width: 15%;
+    background: #efefef;
+    border: 0;
+    font-size: 10pt;
+    margin: 6px 0px;
+    margin-left: 50px;
+    }
+  
+  </style>
+</head>
+
+<body class="body">
+  <h3 class="h3">Kurs Rupiah</h3>
+  <form>
+    <input class="nilai" type="text" placeholder="Masukan Nilai Uang" id="nilaiUang" autocomplete="off">
+    <select class="nilai" id="select">
+      <option value="USD">DOLAR US</option>
+      <option value="SD">DOLAR SINGAPORE</option>
+      <option value="RINGGIT">RINGGIT MALAYSIA</option>
+      <option value="YEN">YEN JAPAN</option>
+      <option value="EURO">EURO</option>
+      <option value="RIYAL">Riyal Arab</option>
+    </select>
+    <input class="nilai" type="text" placeholder="Nilai Uang Rupiah" id="jumlahNilai">
+  </form><br>
+  <button class="tombol" type="button" onclick="KursRupiah()">Check</button>
+</body>
+<script>
+  function KursRupiah() {
+    var nilaiUang = document.getElementById("nilaiUang").value
+    var uang = document.getElementById("select").value;
+    var jumlahNilai = 0
+
+    if (uang === "USD") {
+      jumlahNilai = nilaiUang * 9915
+      document.getElementById("jumlahNilai").value = 'Rp. ' + jumlahNilai
+    } else if (uang === "SD") {
+      jumlahNilai = nilaiUang * 13472
+      document.getElementById("jumlahNilai").value = 'Rp. ' + jumlahNilai
+    } else if (uang === "RINGGIT") {
+      jumlahNilai = nilaiUang * 874
+      document.getElementById("jumlahNilai").value = 'Rp. ' + jumlahNilai
+    } else if (uang === "YEN") {
+      jumlahNilai = nilaiUang * 120
+      document.getElementById("jumlahNilai").value = 'Rp. ' + jumlahNilai
+    } else if (uang === "EURO") {
+      jumlahNilai = nilaiUang * 15888
+      document.getElementById("jumlahNilai").value = 'Rp. ' + jumlahNilai
+    } else if (uang === "RIYAL") {
+      jumlahNilai = nilaiUang * 3592
+      document.getElementById("jumlahNilai").value = 'Rp. ' + jumlahNilai
+    }
+  }
+</script>
+
+</html>
